@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import university.Department;
 import university.Professor;
 import university.School;
 
@@ -46,24 +47,58 @@ public class UniServiceImp implements UniService {
 		return school;
 	}
 
+	/**
+	 * 학과등록 : 이승주
+	 */
 	@Override
 	public School addDepartment(School school) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Department> list = school.getDepartmentList();
+		if(list == null) {
+			list = new ArrayList<Department>();
+		}
+		System.out.print("등록할 학과명 : ");
+		String name = sc.nextLine();
+		Department tmp = new Department(name);
+		if(!list.contains(tmp)) {
+			list.add(tmp);
+			System.out.println("학과를 등록했습니다.");
+		}else {
+			System.out.println("이미 등록된 학과입니다.");
+		}
+		school.setDepartmentList(list);
+		return school;
 	}
 
+	/**
+	 * 학과수정 : 이승주
+	 */
 	@Override
 	public School updateDepartment(School school) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Department> list = school.getDepartmentList();
+		if(list == null) {
+			System.out.println("만들어진 학과가 없습니다.");
+			return school;
+		}
+		System.out.println("수정할 학과명: ");
+		String name = sc.nextLine();
+		Department tmp = new Department(name);
+		
+		
+		return school;
 	}
 
+	/**
+	 * 학과삭제 : 이승주
+	 */
 	@Override
 	public School deleteDepartment(School school) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * 학과에 교수, 학생 관리 : 이승주
+	 */
 	@Override
 	public School managerDepartment(School school) {
 		// TODO Auto-generated method stub

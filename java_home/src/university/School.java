@@ -10,5 +10,5 @@ import lombok.Data;
 public class School {
 
 	List<Professor> professorList = new ArrayList<Professor>();
-	
+	List<Department> departmentList = new ArrayList<Department>();
 }

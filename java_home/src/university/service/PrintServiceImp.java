@@ -45,11 +45,26 @@ public class PrintServiceImp implements PrintService {
 		System.out.println("1. 학과 등록");
 		System.out.println("2. 학과 수정");
 		System.out.println("3. 학과 삭제");
-		System.out.println("4. 이전으로");
+		System.out.println("4. 학과 교수/학생 관리");
+		System.out.println("5. 이전으로");
 		System.out.println("--------------------");
 		System.out.print("메뉴 선택 : ");
 	}
 
+	@Override
+	public void printSubDPMMenu() {
+		System.out.println("-----학과 교수, 학생 관리-----");
+		System.out.println("1. 교수 등록");
+		System.out.println("2. 교수 수정");
+		System.out.println("3. 교수 삭제");
+		System.out.println("4. 학생 등록");
+		System.out.println("5. 학생 수정");
+		System.out.println("6. 학생 삭제");
+		System.out.println("7. 이전으로");
+		System.out.println("-------------------------");
+		System.out.print("메뉴 선택 : ");
+	}
+	
 	@Override
 	public void printSJMMenu() {
 		System.out.println("-----교수 관리 메뉴-----");
@@ -60,5 +75,6 @@ public class PrintServiceImp implements PrintService {
 		System.out.println("--------------------");
 		System.out.print("메뉴 선택 : ");
 	}
+
 
 }

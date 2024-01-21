@@ -10,7 +10,10 @@ public interface PrintService {
 	void printSTDMMenu();
 
 	void printDPMMenu();
+	
+	void printSubDPMMenu();
 
 	void printSJMMenu();
+
 
 }

@@ -22,7 +22,7 @@ public class UniProgram implements UniversityProgram {
 	private final int PFMEXIT = 4;
 	private final int STDMEXIT = 4;
 	private final int DPMEXIT = 5;
-	private final int SUBDPMEXIT = 5;
+	private final int SUBDPMEXIT = 7;
 	private final int SJMEXIT = 4;
 	
 	@Override
@@ -74,6 +74,7 @@ public class UniProgram implements UniversityProgram {
 		case 6:
 			//조회
 			System.out.println("조회 예정");
+			System.out.println(school.getDepartmentList());
 			break;
 		case 7:
 			//프로그램 종료
@@ -204,7 +205,7 @@ public class UniProgram implements UniversityProgram {
 		int menu;
 		do {
 			//메뉴 출력
-			ps.printDPMMenu();
+			ps.printSubDPMMenu();
 			//메뉴 선택
 			menu = sc.nextInt();
 			//메뉴 실행
